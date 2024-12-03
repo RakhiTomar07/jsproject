@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basket</title>
+</head>
+<body>
+    <h1><img src="Screenshot_2024-10-25_150248-removing-preview.png" alt="" width="30px" height="30px">Total Basket:12</h1>
+    <main>
+        <div class="box box1">First Basket:<span id="firstbasket"></span></div>
+        <div class="bpx box2">
+         <button onclick="left()"><i class="bx bx-left-arrow-alt" style="color: #faf4f4;"></i></button>
+         <button onclick="right()"><i class="bx bx-right-arrow-alt" style="color: #faf4f4;"></i></button>
+        </div>
+        <div class="box box1">Second Basket:<span id="secondbasket"></span></div>
+    </main>
+    <script>
+        let firstbasket = 12;
+        let secondbasket = 0;
+        let first =document.getElementById("firstbasket");
+        let second =document.getElementById("secondbasket");
+        first.innerHTML = firstbasket;
+        second.innerHTML = secondbasket; 
+        function left() {
+            firstbasket <12 ? (firstbasket++, secondbasket--) : "";
+            first.innerHTML = firstbasket;
+           second.innerHTML = secondbasket;
+        }
+        function right() {
+            secondbasket <12 ? (firstbasket--, secondbasket++) : "";
+            first.innerHTML = firstbasket;
+           second.innerHTML = secondbasket;
+        }
+    </script>
+</body>
+</html>
